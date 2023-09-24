@@ -2,26 +2,150 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html{
+  scroll-behavior: smooth;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body{
+  @apply bg-slate-700
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.header{
+  @apply h-[10vh] w-screen flex items-center justify-between px-[5vw]
+}
+.headerLeft{
+  @apply flex h-full w-auto items-center justify-center
+}
+.headerLeft > img{
+  @apply h-[60%] w-auto
+}
+.headerLeftR{
+  @apply flex flex-col h-full text-orange-500 w-auto items-center ml-[15px] justify-center
+}
+.headerLeftR i:first-child{
+  @apply text-2xl font-black
+}
+.headerLeftR h2{
+  @apply text-xl font-semibold text-white
+}
+.headerRight{
+  @apply hidden justify-evenly items-center md:flex
+}
+.headerRight a{
+  @apply text-[3vh] font-medium duration-300 text-white
+}
+.headerRight a:hover{
+  @apply text-orange-500
+}
+.menu{
+  background: rgba(46, 42, 61, 0.815);
+  backdrop-filter: blur(5px);
+}
+.menu{
+  @apply text-white duration-500 flex flex-col top-0 left-0 z-20 fixed w-screen h-screen justify-between
+}
+.menuTop{
+  @apply w-screen h-[10vh] items-center text-right text-[8vh] pr-[4%] text-gray-500 cursor-pointer
+}
+.menuBottom{
+  @apply w-screen h-[10vh]
+}
+.menuMiddle{
+  @apply font-bold w-screen h-[50%] flex flex-col items-center justify-evenly text-3xl
+}
+.menuMiddle a{
+  @apply hover:text-orange-500 duration-300
+}
+.home > img{
+  @apply z-[-1] absolute top-0 left-0 object-cover w-screen h-[70vh] opacity-50
+}
+.home{
+  @apply flex flex-col w-screen h-auto items-center
+}
+.title{
+  @apply w-[80vw] h-[70vh] lg:w-[60vw] flex flex-col justify-center items-center
+}
+.title h1{
+  @apply text-orange-500 text-[12vw] font-black lg:text-[8vw]
+}
+.title h2{
+  @apply  text-center text-white text-[5vw] font-bold lg:text-[3vw]
+}
+.title h1:nth-child(2){
+  @apply text-white text-[9vw] lg:text-[6vw]
+}
+.rentForm{
+  @apply w-[100vw] flex-col  h-auto bg-gray-200 flex justify-center items-center
+}
+.rental{
+  @apply w-[80vw] h-auto flex flex-col py-[5vh] bg-white
+  shadow-xl shadow-orange-500  mb-[5vh] mt-[-5vh]
+  rounded-xl
+}
+.rentalT{
+  @apply w-full h-1/4 text-2xl font-bold lg:ml-[5%] lg:text-left
+  text-center flex flex-col justify-center items-center lg:justify-normal
+  lg:items-start
+}
+.rentalM{
+  @apply w-full h-3/4 my-[3vh] flex flex-col justify-center items-center md:grid md:grid-flow-row md:grid-cols-2 place-items-center
+}
+.rentalM label{
+  @apply  flex flex-col text-[17px] font-bold my-[2vh]
+}
+.rentalM h1 > img{
+  @apply h-[17px] w-auto pr-2
+}
+.rentalM h1 {
+  @apply flex items-center
+}
+.rentalM input, .rentalM select{
+  @apply ml-[-5px] w-[60vw] text-gray-600 text-center
+  border-[1px] md:w-[30vw] border-gray-400 rounded-sm
+  h-[5vh] text-[2vh] outline-none mt-[3px]
+}
+.rentalM button{
+  @apply w-[60vw] md:w-[30vw] h-auto py-[10px] bg-orange-500 text-[2vh]
+  lg:text-2xl hover:shadow-2xl font-bold rounded-sm text-white
+  hover:shadow-slate-700 duration-300 mt-[15px] hover:bg-slate-700
+}
+.best{
+  @apply bg-white w-screen h-auto py-[5vh] flex flex-col items-center justify-center
+}
+.bestT{
+  @apply flex text-center lg:text-7xl text-5xl text-slate-700 font-black
+}
+.bestB{
+  @apply my-[10vh] w-[60vw] text-center h-auto flex flex-col lg:flex-row justify-center items-center
+}
+.bestBCh{
+  @apply flex flex-col items-center justify-center
+}
+.bestBCh img{
+  @apply hover:scale-105 cursor-pointer duration-300 rounded-full object-cover w-[40vw] h-[40vw] lg:w-[15vw] lg:h-[15vw] items-center justify-center
+}
+.bestBCh h1{
+  @apply text-3xl font-bold text-slate-700 my-[2vh]
+}
+.bestBCh p{
+  @apply max-w-[100%] lg:max-w-[60%] text-xl font-semibold text-slate-400 my-[2vh]
+}
+.up{
+  @apply fixed right-[2vw] bottom-[5vh] w-[5vh] h-[5vh] rounded-full
+  bg-orange-500 hover:bg-gray-900 p-[1vh] cursor-pointer duration-300
+}
+.finalisation{
+  @apply fixed flex flex-col top-0 left-0 bg-white w-screen h-screen
+  z-20 lg:w-[60vw] lg:left-[20vw]
+}
+.finalisationT{
+  @apply flex justify-between bg-orange-500 px-2 text-white
+  text-2xl cursor-pointer
+}
+.finalisationML{
+}
+.finalisationM img{
+  @apply w-[2vh] h-auto
+}
+.backdrop{
+  @apply fixed top-0 left-0 w-screen h-screen bg-[rgb(33,33,33,.5)]
+  backdrop-blur-sm z-[20]
 }
