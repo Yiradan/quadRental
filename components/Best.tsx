@@ -1,7 +1,7 @@
 
 const Best = () => {
   return (
-    <div className='best'>
+    <div className='best shadow-black shadow-2xl'>
       <div className="bestT flex-col">
         <div className="flex">Riding a <h1 className="text-orange-500">beast</h1></div>
         <p className='text-2xl my-3 text-gray-400'>Choosing the right one</p>

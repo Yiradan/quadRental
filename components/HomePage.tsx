@@ -4,7 +4,7 @@ import Rental from "./Rental"
 
 const HomePage = () => {
   return (
-    <div className='home'>
+    <div className='home max-w-full'>
       <img src='/static/background.jpg' alt='background' />
       <div className="title">
         <div className='flex'><h1>Quad</h1><h1 className='pl-[15px]'>rental</h1></div>

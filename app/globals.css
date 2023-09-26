@@ -4,12 +4,13 @@
 
 html{
   scroll-behavior: smooth;
+  max-width: 100%;
 }
 body{
-  @apply bg-slate-700
+  @apply bg-slate-700 max-w-[100%] w-[100%] p-0 m-0 box-border
 }
 .header{
-  @apply h-[10vh] w-screen flex items-center justify-between px-[5vw]
+  @apply h-[10vh] w-full flex items-center justify-between px-[5vw]
 }
 .headerLeft{
   @apply flex h-full w-auto items-center justify-center
@@ -18,7 +19,8 @@ body{
   @apply h-[60%] w-auto
 }
 .headerLeftR{
-  @apply flex flex-col h-full text-orange-500 w-auto items-center ml-[15px] justify-center
+  @apply flex flex-col h-full text-orange-500 w-auto items-center
+  ml-[15px] justify-center
 }
 .headerLeftR i:first-child{
   @apply text-2xl font-black
@@ -40,25 +42,25 @@ body{
   backdrop-filter: blur(5px);
 }
 .menu{
-  @apply text-white duration-500 flex flex-col top-0 left-0 z-20 fixed w-screen h-screen justify-between
+  @apply duration-500 text-white flex flex-col top-0 z-20 fixed w-full h-full justify-between
 }
 .menuTop{
-  @apply w-screen h-[10vh] items-center text-right text-[8vh] pr-[4%] text-gray-500 cursor-pointer
+  @apply w-full h-[10vh] items-center text-right text-[8vh] pr-[4%] text-gray-500 cursor-pointer
 }
 .menuBottom{
-  @apply w-screen h-[10vh]
+  @apply w-full h-[10vh]
 }
 .menuMiddle{
-  @apply font-bold w-screen h-[50%] flex flex-col items-center justify-evenly text-3xl
+  @apply font-bold w-full h-[50%] flex flex-col items-center justify-evenly text-3xl
 }
 .menuMiddle a{
   @apply hover:text-orange-500 duration-300
 }
 .home > img{
-  @apply z-[-1] absolute top-0 left-0 object-cover w-screen h-[70vh] opacity-50
+  @apply z-[-1] absolute object-cover bg-center w-full h-[70vh] opacity-50
 }
 .home{
-  @apply flex flex-col w-screen h-auto items-center
+  @apply flex flex-col w-full max-w-[100%] h-auto items-center
 }
 .title{
   @apply w-[80vw] h-[70vh] lg:w-[60vw] flex flex-col justify-center items-center
@@ -73,7 +75,7 @@ body{
   @apply text-white text-[9vw] lg:text-[6vw]
 }
 .rentForm{
-  @apply w-[100vw] flex-col  h-auto bg-gray-200 flex justify-center items-center
+  @apply w-full flex-col  h-auto bg-gray-200 flex justify-center items-center
 }
 .rental{
   @apply w-[80vw] h-auto flex flex-col py-[5vh] bg-white
@@ -108,7 +110,7 @@ body{
   hover:shadow-slate-700 duration-300 mt-[15px] hover:bg-slate-700
 }
 .best{
-  @apply bg-white w-screen h-auto py-[5vh] flex flex-col items-center justify-center
+  @apply bg-white w-full h-auto py-[5vh] flex flex-col items-center justify-center
 }
 .bestT{
   @apply flex text-center lg:text-7xl text-5xl text-slate-700 font-black
@@ -130,22 +132,65 @@ body{
 }
 .up{
   @apply fixed right-[2vw] bottom-[5vh] w-[5vh] h-[5vh] rounded-full
-  bg-orange-500 hover:bg-gray-900 p-[1vh] cursor-pointer duration-300
+  bg-orange-500 hover:bg-slate-700 p-[1vh] cursor-pointer duration-300
 }
 .finalisation{
-  @apply fixed flex flex-col top-0 left-0 bg-white w-screen h-screen
-  z-20 lg:w-[60vw] lg:left-[20vw]
+  @apply fixed flex flex-col top-0 left-0 bg-white w-[95vw] h-[93vh]
+  z-20 md:w-[90vw] md:left-[2%] lg:w-[60vw] lg:left-[20vw] my-[5vh] mx-[2vw] overflow-y-auto
 }
 .finalisationT{
   @apply flex justify-between bg-orange-500 px-2 text-white
-  text-2xl cursor-pointer
+  text-[3vh] cursor-pointer font-bold
+  items-center
+}
+.finalisationM{
+  @apply w-full h-auto flex flex-col md:flex-row px-[3vw]
 }
 .finalisationML{
+  @apply font-bold flex flex-col text-xl w-auto md:w-1/2
+  pl-[3vw] md:m-0 m-auto
 }
-.finalisationM img{
-  @apply w-[2vh] h-auto
+.finalisationML label{
+  @apply py-[2vh] text-lg
+}
+.finalisationML img{
+  @apply w-auto h-[3vh] pr-[20px]
+}
+.finalisationML p{
+  @apply pl-[6vh] font-normal text-slate-700
+}
+.finalisationMR{
+  @apply m-auto mt-[3vh] flex flex-col p-[1vh] lg:max-w-[50%]
+}
+.finalisationMR >  h1{
+  @apply text-xl font-bold text-slate-700 text-center
 }
 .backdrop{
-  @apply fixed top-0 left-0 w-screen h-screen bg-[rgb(33,33,33,.5)]
+  @apply fixed top-0 left-0 w-full h-full bg-[rgb(33,33,33,.5)]
   backdrop-blur-sm z-[20]
+}
+.finalisationB{
+  @apply w-full h-auto px-[5vw]
+}
+.finalisationB h1{
+  @apply text-xl font-semibold text-slate-700 mt-5
+}
+.finalisationB input{
+  @apply w-full text-lg bg-gray-200 outline-none p-2 mt-2
+  text-slate-700
+}
+.vehicleGrid{
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 15vh);
+  grid-gap: 10px;
+}
+.vehicleGrid > div{
+  @apply w-full h-full overflow-hidden hover:bg-black duration-300
+}
+.vehicleGrid img{
+  @apply bg-cover w-full h-full object-cover duration-[.4s] ease-in-out cursor-pointer
+}
+
+.vehicleGrid div:hover > img{
+  @apply scale-105 opacity-40
 }
