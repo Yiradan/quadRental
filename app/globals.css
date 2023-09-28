@@ -185,12 +185,16 @@ body{
   grid-gap: 10px;
 }
 .vehicleGrid > div{
-  @apply w-full h-full overflow-hidden hover:bg-black duration-300
+  @apply w-full h-full relative overflow-hidden duration-300
 }
 .vehicleGrid img{
   @apply bg-cover w-full h-full object-cover duration-[.4s] ease-in-out cursor-pointer
 }
 
 .vehicleGrid div:hover > img{
-  @apply scale-105 opacity-40
+  @apply scale-105
+}
+.gridh1{
+  @apply absolute bottom-0 left-0 text-lg font-semibold
+  bg-slate-700 w-full text-orange-500 p-2 duration-300
 }

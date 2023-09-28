@@ -14,23 +14,25 @@ const Featured = () => {
         <div className='vehicleGrid my-10 lg:grid flex flex-col'>
           <div className='col-start-1 col-end-3 row-start-1 row-end-5'>
             <img src={vehicleList[0].image} alt="quad" />
-            <h1>{vehicleList[0].name}</h1>
+            <h1 className='gridh1'>{vehicleList[0].name}</h1>
           </div>
           <div className='col-start-3 col-end-4 row-start-1 row-end-3'>
             <img src={vehicleList[1].image} alt='quad' />
-            <h1>{vehicleList[1].name}</h1>
+            <h1 className='gridh1'>{vehicleList[1].name}</h1>
           </div>
           <div className='col-start-4 col-end-5 row-start-1 row-end-3'>
             <img src={vehicleList[2].image} alt='quad' />
-            <h1>{vehicleList[2].name}</h1>
+            <h1 className='gridh1'>{vehicleList[2].name}</h1>
           </div>
           <div className='col-start-3 col-end-4 row-start-3 row-end-5'>
             <img className='' src={vehicleList[3].image} alt='quad' />
-            <h1>{vehicleList[3].name}</h1>
+            <h1 className='gridh1'>{vehicleList[3].name}</h1>
           </div>
           <div className='col-start-4 col-end-5 row-start-3 row-end-5'>
             <img src={vehicleList[4].image} alt='quad' />
-            <h1>{vehicleList[4].name}</h1>
+            <div>
+              <h1 className='gridh1'>{vehicleList[4].name}</h1>
+            </div>
           </div>
         </div>
     </div>
