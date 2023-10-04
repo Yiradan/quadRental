@@ -36,13 +36,13 @@ const Navbar = () => {
           <Link href='/'>
             Home
           </Link>
-          
-          <Link href='/about'>
-            About
-          </Link>
 
           <Link href='/quads'>
             Quads
+          </Link>
+          
+          <Link href='/about'>
+            About
           </Link>
 
           <Link href='/contact'>
@@ -62,13 +62,13 @@ const Navbar = () => {
             <Link href='/'>
               Home
             </Link>
-            
-            <Link href='/about'>
-              About
-            </Link>
 
             <Link href='/quads'>
               Quads
+            </Link>
+            
+            <Link href='/about'>
+              About
             </Link>
 
             <Link href='/contact'>
@@ -95,13 +95,13 @@ const Navbar = () => {
           <Link href='/'>
             Home
           </Link>
-          
-          <Link href='/about'>
-            About
-          </Link>
 
           <Link href='/quads'>
             Quads
+          </Link>
+          
+          <Link href='/about'>
+            About
           </Link>
 
           <Link href='/contact'>

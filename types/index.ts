@@ -13,5 +13,6 @@ export interface vehicleListProps{
   fuel?: string,
   power?: number,
   tank?: number,
+  price?: number,
   image?: string
 }

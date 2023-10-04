@@ -1,5 +1,7 @@
+import About from "./About"
 import Best from "./Best"
 import Featured from "./Featured"
+import Mobile from "./Mobile"
 import Rental from "./Rental"
 
 const HomePage = () => {
@@ -15,6 +17,8 @@ const HomePage = () => {
       </div>
       <Best />
       <Featured />
+      <About />
+      <Mobile />
     </div>
   )
 }

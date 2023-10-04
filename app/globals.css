@@ -122,7 +122,7 @@ body{
   @apply flex flex-col items-center justify-center
 }
 .bestBCh img{
-  @apply hover:scale-105 cursor-pointer duration-300 rounded-full object-cover w-[40vw] h-[40vw] lg:w-[15vw] lg:h-[15vw] items-center justify-center
+  @apply hover:scale-105 duration-300 rounded-full object-cover w-[40vw] h-[40vw] lg:w-[15vw] lg:h-[15vw] items-center justify-center
 }
 .bestBCh h1{
   @apply text-3xl font-bold text-slate-700 my-[2vh]
@@ -180,21 +180,55 @@ body{
   text-slate-700
 }
 .vehicleGrid{
+  width: 100%; height: 100%;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 15vh);
-  grid-gap: 10px;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+  place-content: center;
 }
 .vehicleGrid > div{
-  @apply w-full h-full relative overflow-hidden duration-300
+  @apply w-full h-full relative overflow-hidden duration-300 lg:m-0
+  lg:ml-5 bg-slate-700
 }
-.vehicleGrid img{
-  @apply bg-cover w-full h-full object-cover duration-[.4s] ease-in-out cursor-pointer
+.fm img{
+  @apply bg-cover w-full h-full object-cover duration-[.4s] ease-in-out
 }
-
-.vehicleGrid div:hover > img{
-  @apply scale-105
+.fm div:hover > .h1Div{
+  @apply top-0
 }
-.gridh1{
-  @apply absolute bottom-0 left-0 text-lg font-semibold
-  bg-slate-700 w-full text-orange-500 p-2 duration-300
+.fm div:hover > img{
+  @apply scale-105 opacity-20
+}
+.h1Div > div:hover > img{
+  @apply opacity-100
+}
+.h1Div{
+  @apply absolute flex top-[100%] left-0 w-full h-full flex-col m-auto
+  duration-300 font-bold items-center justify-center ease-in-out text-white
+}
+.h1Div > div{
+  @apply flex flex-row items-center w-[80%] h-[17%] font-semibold
+}
+.h1Div img{
+  @apply h-1/2 w-auto pr-5
+}
+.about{
+  @apply flex w-[100%] h-auto bg-slate-500 justify-center
+}
+.aboutT{
+  @apply flex flex-row w-[80%] text-6xl font-bold
+}
+.mobile{
+  @apply flex md:flex-row w-full h-auto items-center bg-slate-300 md:justify-evenly
+  flex-col text-center md:text-left
+}
+.store img{
+  @apply w-[5vh] h-auto
+}
+.store{
+  @apply bg-white p-3 px-6 rounded-md flex m-4 sm:w-1/2 md:w-1/2 items-center
+  hover:bg-orange-500 duration-300 justify-between
+}
+.storeR{
+  @apply pl-4
 }

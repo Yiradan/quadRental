@@ -112,7 +112,7 @@ const Rental = () => {
         
         <label htmlFor="vehicle">
           <h1>
-            <img src='/static/atv.png' alt='atv' />
+            <img src='/static/quad.png' alt='atv' />
             Vehicle
           </h1>
         <select
