@@ -15,7 +15,7 @@ const Featured: React.FC = () => {
         lg:items-center'>
           <div className="w-full bg-slate-700 relative h-full overflow-hidden">
             <img src={vehicleList[0].image} alt='quad' />
-            <div className="h1Div text-[3vh]">
+            <div className="h1Div sm:text-[3vh] text-[2vh]">
               <div className="">
                 <img src='/static/quadW.png' alt='quad' />
                 <p>{vehicleList[0].name}</p>

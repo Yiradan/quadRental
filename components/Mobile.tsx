@@ -5,7 +5,7 @@ const Mobile = () => {
       <div className="mobileL">
         <h3 className='text-2xl font-semibold'>Get our mobile app for easy and convenient usage</h3>
         <h1 className='text-5xl py-2 font-bold'>Download our application</h1>
-        <div className="flex flex-col items-center md:flex-row md:justify-evenly mt-5">
+        <div className="flex flex-col items-center my-10 md:flex-row md:justify-evenly mt-5">
           <button className="store">
             <img src='/static/google.png' alt='gplay'/>
             <div className="storeR flex flex-col">

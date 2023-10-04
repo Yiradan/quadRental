@@ -32,7 +32,7 @@ body{
   @apply hidden justify-evenly items-center md:flex
 }
 .headerRight a{
-  @apply text-[3vh] font-medium duration-300 text-white
+  @apply text-[20px] font-normal duration-300 text-white
 }
 .headerRight a:hover{
   @apply text-orange-500
@@ -212,23 +212,39 @@ body{
 .h1Div img{
   @apply h-1/2 w-auto pr-5
 }
-.about{
-  @apply flex w-[100%] h-auto bg-slate-500 justify-center
-}
-.aboutT{
-  @apply flex flex-row w-[80%] text-6xl font-bold
-}
 .mobile{
-  @apply flex md:flex-row w-full h-auto items-center bg-slate-300 md:justify-evenly
-  flex-col text-center md:text-left
+  @apply flex lg:flex-row w-full h-auto items-center bg-slate-300 lg:justify-evenly
+  flex-col text-center lg:text-left
 }
 .store img{
   @apply w-[5vh] h-auto
 }
 .store{
-  @apply bg-white p-3 px-6 rounded-md flex m-4 sm:w-1/2 md:w-1/2 items-center
-  hover:bg-orange-500 duration-300 justify-between
+  @apply bg-white p-3 px-6 rounded-md flex my-4 w-full sm:w-1/2 md:mx-4 items-center
+  hover:bg-orange-500 duration-300 justify-evenly sm:justify-between
 }
 .storeR{
   @apply pl-4
+}
+.about{
+  @apply h-auto w-full bg-white p-0 shadow-xl shadow-black justify-center items-center
+  flex py-16 flex-col
+}
+.aboutT{
+  @apply text-center w-4/5
+}
+.aboutM{
+  @apply w-4/5 flex flex-col my-5 lg:flex-row justify-between
+}
+.aboutE{
+  @apply flex w-full flex-col items-center text-center lg:m-10 py-5
+}
+.aboutE img{
+  @apply w-[10vh] bg-orange-500 p-1
+}
+.aImg{
+  @apply p-4 bg-orange-500 w-[12vh] h-auto rounded-full
+}
+footer{
+  @apply w-full h-auto flex
 }
