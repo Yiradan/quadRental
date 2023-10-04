@@ -15,9 +15,9 @@ const HomePage = () => {
       <div className='rentForm'>
         <Rental />
       </div>
-      <Best />
-      <Featured />
       <About />
+      <Featured />
+      <Best />
       <Mobile />
     </div>
   )

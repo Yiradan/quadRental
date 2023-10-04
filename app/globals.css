@@ -1,16 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 html{
   scroll-behavior: smooth;
   max-width: 100%;
+  font-family: Poppins, sans-serif;
 }
 body{
-  @apply bg-slate-700 max-w-[100%] w-[100%] p-0 m-0 box-border
+  @apply bg-slate-700 w-[100%] p-0 m-0 box-border
 }
 .header{
-  @apply h-[10vh] w-full flex items-center justify-between px-[5vw]
+  @apply h-[7vh] w-full flex items-center justify-between px-[5vw] shadow-black/50
 }
 .headerLeft{
   @apply flex h-full w-auto items-center justify-center
@@ -19,23 +23,23 @@ body{
   @apply h-[60%] w-auto
 }
 .headerLeftR{
-  @apply flex flex-col h-full text-orange-500 w-auto items-center
-  ml-[15px] justify-center
+  @apply flex h-full w-auto items-center justify-center
+  ml-[10px] leading-[5px]
 }
-.headerLeftR i:first-child{
+.headerLeftR h1{
   @apply text-2xl font-black
 }
 .headerLeftR h2{
   @apply text-xl font-semibold text-white
 }
-.headerRight{
+.headerRight, .headerRightOrange{
   @apply hidden justify-evenly items-center md:flex
 }
-.headerRight a{
-  @apply text-[20px] font-normal duration-300 text-white
+.headerRight a, .headerRightOrange a{
+  @apply text-[20px] font-normal duration-300 text-white hover:text-orange-500
 }
-.headerRight a:hover{
-  @apply text-orange-500
+.headerRightOrange a{
+  @apply hover:text-slate-700 hover:translate-y-1
 }
 .menu{
   background: rgba(46, 42, 61, 0.815);
@@ -45,7 +49,7 @@ body{
   @apply duration-500 text-white flex flex-col top-0 z-20 fixed w-full h-full justify-between
 }
 .menuTop{
-  @apply w-full h-[10vh] items-center text-right text-[8vh] pr-[4%] text-gray-500 cursor-pointer
+  @apply w-full h-[10vh] items-center text-right text-[6vh] text-gray-500
 }
 .menuBottom{
   @apply w-full h-[10vh]
@@ -246,5 +250,24 @@ body{
   @apply p-4 bg-orange-500 w-[12vh] h-auto rounded-full
 }
 footer{
-  @apply w-full h-auto flex
+  @apply w-full h-auto flex justify-evenly flex-col md:flex-row py-[7vh] bg-white
+  md:px-[5vw]
+}
+.foot{
+  @apply py-10 md:py-0 px-10 w-full
+}
+.footB *{
+  @apply py-1
+}
+.footB img{
+  @apply p-0 h-[20px] w-auto flex flex-col
+}
+.footT{
+  @apply text-2xl font-bold flex
+}
+.footB{
+  @apply flex flex-col pt-2
+}
+.footB h1{
+  @apply duration-300 hover:text-orange-500 text-lg cursor-pointer
 }

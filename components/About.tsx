@@ -5,7 +5,7 @@ const About : React.FC = () => {
     <div className='about'>
       <div className='aboutT flex flex-col'>
         <h3 className='text-3xl font-semibold'>Plan your trip now</h3>
-        <div className="my-5 text-6xl lg:flex font-bold justify-center">
+        <div className="my-5 text-3xl lg:text-6xl lg:flex font-bold justify-center">
           Quick & easy
           <div className="flex justify-center items-center">
             <h1 className='text-orange-500 px-3'>Quad</h1>
