@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div id='nav' className='header absolute left-0 top-0 bg-transparent '>
+      <div id='nav' className='header absolute left-0 top-0 bg-transparent z-10'>
         <Link href='/' className="headerLeft">
           <img src='/static/quadW.png' alt='logo' />
           <div className="headerLeftR">
@@ -37,13 +37,13 @@ const Navbar = () => {
           <Link href='/'>
             Home
           </Link>
-
-          <Link href='/quads'>
-            Quads
-          </Link>
           
           <Link href='/about'>
             About
+          </Link>
+
+          <Link href='/quads'>
+            Quads
           </Link>
 
           <Link href='/contact'>
@@ -55,7 +55,9 @@ const Navbar = () => {
           src='/static/menuW.png' alt='menu'
           className='h-[40%] w-auto md:hidden cursor-pointer'
         />
-        <div className={`menu ${menu ? 'left-0 opacity-100' : 'opacity-0 left-[-100vw]'}`}>
+      </div>
+
+      <div className={`menu z-20 ${menu ? 'left-0 opacity-100' : 'opacity-0 left-[-100vw]'}`}>
           <div className="menuTop">
             <p onClick={()=> setMenu(false)}
             className='duration-300 absolute top-0 right-[4%]
@@ -63,25 +65,24 @@ const Navbar = () => {
             >×</p>
           </div>
           <div className="menuMiddle">
-            <Link href='/'>
+            <Link onClick={()=> setMenu(false)} href='/'>
               Home
             </Link>
-
-            <Link href='/quads'>
-              Quads
-            </Link>
             
-            <Link href='/about'>
+            <Link onClick={()=> setMenu(false)} href='/about'>
               About
             </Link>
 
-            <Link href='/contact'>
+            <Link onClick={()=> setMenu(false)} href='/quads'>
+              Quads
+            </Link>
+
+            <Link onClick={()=> setMenu(false)} href='/contact'>
               Contact
             </Link>
           </div>
           <div className="menuBottom"></div>
         </div>
-      </div>
 
       <div className={`
         header shadow-xl fixed top-0 left-0 duration-300 bg-orange-500 z-10
@@ -99,13 +100,13 @@ const Navbar = () => {
           <Link href='/'>
             Home
           </Link>
-
-          <Link href='/quads'>
-            Quads
-          </Link>
           
           <Link href='/about'>
             About
+          </Link>
+
+          <Link href='/quads'>
+            Quads
           </Link>
 
           <Link href='/contact'>
