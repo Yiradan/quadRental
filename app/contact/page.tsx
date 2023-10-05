@@ -1,3 +1,4 @@
+import CallUs from '@/components/CallUs'
 import CoverImage from '@/components/CoverImage'
 
 const Contact = () => {
@@ -6,6 +7,7 @@ const Contact = () => {
       <CoverImage
         title='Contact'
       />
+      <CallUs />
     </div>
   )
 }

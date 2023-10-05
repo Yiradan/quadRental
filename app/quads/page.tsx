@@ -1,13 +1,16 @@
+import CallUs from "@/components/CallUs"
 import CoverImage from "@/components/CoverImage"
 
 const Quads = () => {
   return (
     <div className='quads'>
         <CoverImage
-          title='Featured Quads'
-          subTitle="asd"
+          title='Quads'
         />
-      <div className="asd">asdasd</div>
+      <div className="w-[90%] md:w-4/5 flex flex-col md:grid grid-cols-2">
+        
+      </div>
+      <CallUs />
     </div>
   )
 }

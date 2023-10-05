@@ -1,6 +1,7 @@
 import Image from "next/image"
 import About from "./About"
 import Best from "./Best"
+import CallUs from "./CallUs"
 import Featured from "./Featured"
 import Mobile from "./Mobile"
 import Rental from "./Rental"
@@ -10,12 +11,10 @@ const HomePage = () => {
     <div className='home w-full'>
       <div className="absolute top-0 left-0 w-full h-[70vh]">
         <Image
-          priority
           fill
-          objectFit="cover"
           src='/static/background.jpg'
           alt='background'
-          className='background'
+          className='background object-cover'
         />
       </div>
       <div className="title">
@@ -28,6 +27,7 @@ const HomePage = () => {
       </div>
       <About />
       <Featured />
+      <CallUs />
       <Best />
       <Mobile />
     </div>

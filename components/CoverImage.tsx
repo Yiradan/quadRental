@@ -10,6 +10,7 @@ const CoverImage = ({title,subTitle}:CoverImageProps) => {
     <div className="relative flex flex-col justify-center items-center w-full h-[50vh]
     shadow-xl shadow-gray-600">
       <Image
+        priority
         src='/static/background.jpg'
         alt='background-image'
         fill

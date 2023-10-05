@@ -13,7 +13,7 @@
   @apply relative flex flex-col w-full h-auto shadow-xl shadow-slate-300 mt-10
 }
 .card img{
-  @apply max-h-[400px] h-3/4 w-auto object-cover
+  @apply h-3/4 w-auto object-cover
 }
 .cardB{
   @apply h-1/4 py-5 w-full text-3xl flex flex-col justify-center items-center bg-white
