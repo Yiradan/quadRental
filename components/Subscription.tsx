@@ -8,15 +8,17 @@ const Subscription = () => {
 
   const submit = (e:FormEvent) => {
     e.preventDefault()
+    setSubscription('')
   }
 
   return (
     <form onSubmit={submit}>
       <input
+      required
       className='w-full h-auto text-xl outline-none bg-gray-200 my-3 p-2
       rounded-sm'
       placeholder='Your e-mail...'
-      type='text'
+      type='email'
       value={subscription}
       onChange={(e) => setSubscription(e.target.value)}
       />

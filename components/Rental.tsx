@@ -51,7 +51,8 @@ const Rental = () => {
   }
 
   return (
-    <form ref={ref} className='rental'>
+    <div className='w-full flex justify-center'>
+      <form id="rent" ref={ref} className='rental max-w-[1920px]'>
       <div className="rentalT">
         Book a quad
         <div className={`${error ? 'visible' : 'hidden'}
@@ -311,6 +312,7 @@ const Rental = () => {
           </>
         }
     </form>
+    </div>
   )
 }
 

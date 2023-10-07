@@ -3,19 +3,20 @@ import { vehicleList } from "./data"
 
 const Featured: React.FC = () => {
   return (
-    <div className="featured bg-gray-300 w-full p-[5vh] px-[10vw]">
-      <div className="featuredT flex flex-col md:flex-row md:items-center font-bold md:justify-between text-[5vh]">
+    <div className="bg-gray-300 h-auto w-full p-[5vh] py-[6rem] flex justify-center">
+      <div className="px-[5%] flex flex-col items-center max-w-[1920px]">
+      <div className="w-full flex flex-col md:flex-row md:items-center font-bold md:justify-between text-[5vh]">
         <h1 className="flex text-2xl md:text-4xl lg:text-6xl">Featured rent <p className="pl-2 text-orange-500">Quads</p></h1>
         <Link className='md:inline hidden' href="/quads">
           <button className='bg-orange-500 mt-[2vh] md:m-0 hover:bg-slate-700  duration-300 text-white text-2xl shadow p-3 rounded-md'>View All Quads</button>
         </Link>
       </div>
 
-        <div className='fm my-10 w-full lg:flex lg:justify-center
+        <div className='fm mt-10 w-full lg:flex lg:justify-center
         lg:items-center'>
-          <div className="w-full bg-slate-700 relative h-full overflow-hidden">
+          <div className="w-full bg-slate-700 relative h-auto overflow-hidden">
             <img src={vehicleList[0].image} alt='quad' />
-            <div className="h1Div sm:text-[3vh] text-[2vh]">
+            <div className="h1Div sm:text-[2rem] text-[15px]">
               <div className="">
                 <img src='/static/quadW.png' alt='quad' />
                 <p>{vehicleList[0].name}</p>
@@ -146,6 +147,7 @@ const Featured: React.FC = () => {
 
           </div>
         </div>
+    </div>
     </div>
   )
 }

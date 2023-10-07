@@ -16,14 +16,14 @@ const AboutPage = () => {
             <h2 className='text-[4vh] font-semibold text-gray-800'>About the company</h2>
             <h1 className='text-[6vh] py-5 font-bold'>You start the engine, and the adventure begins</h1>
             <p className='text-[3vh] text-gray-600 text-justify font-light'>Our company aims to provide everyone an unforgettable experience through the vehicles we offer. 
-  We believe in seizing life's opportunities, and the only way to do that is to live our days to the fullest. We believe that every day is another gift to prove that living an action-packed life is good.</p>
+            We have to embrace life's possibilities,  and the only way to do that is to live our days to the fullest. We believe that every day is another gift to prove that living an action-packed life is essential.</p>
           </div>
         </div>
       </div>
 
       <div className="ourTeam">
 
-        <div className="py-10 text-[10vw] font-bold">
+        <div className="py-10 text-[5rem] md:text-[8rem] font-bold">
           Our team
         </div>
 

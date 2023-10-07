@@ -12,6 +12,7 @@ const HomePage = () => {
       <div className="absolute top-0 left-0 w-full h-[70vh]">
         <Image
           fill
+          priority
           src='/static/background.jpg'
           alt='background'
           className='background object-cover'

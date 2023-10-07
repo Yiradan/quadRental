@@ -8,11 +8,11 @@ export interface CustomButtonProps{
 }
 
 export interface vehicleListProps{
-  id?: number,
-  name?: string,
-  fuel?: string,
-  power?: number,
-  tank?: number,
-  price?: number,
-  image?: string
+  id: number;
+  name: string;
+  fuel: string;
+  power: number;
+  tank: number;
+  price: number;
+  image: string;
 }

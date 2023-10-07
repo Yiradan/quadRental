@@ -2,7 +2,8 @@ import Subscription from "./Subscription"
 
 const Footer = () => {
   return (
-    <footer>
+    <div className="w-full flex justify-center bg-white">
+      <footer className='max-w-[1920px]'>
       <div className="foot">
         <div className="footT">
           <b className='text-orange-500 pr-2'>Quad</b>
@@ -59,6 +60,7 @@ const Footer = () => {
       </div>
       </div>
     </footer>
+    </div>
   )
 }
 

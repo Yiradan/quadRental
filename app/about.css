@@ -6,7 +6,6 @@
 
 html{
   scroll-behavior: smooth;
-  max-width: 100%;
   font-family: Poppins, sans-serif;
 }
 body{
@@ -81,7 +80,7 @@ body{
   @apply w-full flex-col  h-auto bg-gray-200 flex justify-center items-center
 }
 .rental{
-  @apply w-[80vw] h-auto flex flex-col py-[5vh] bg-white
+  @apply w-[80%] h-auto flex flex-col py-[5vh] bg-white
   shadow-xl shadow-orange-500  mb-[5vh] mt-[-5vh]
   rounded-xl
 }
@@ -125,7 +124,7 @@ body{
   @apply flex flex-col items-center justify-center
 }
 .bestBCh img{
-  @apply hover:scale-105 duration-300 rounded-full object-cover w-[40vw] h-[40vw] lg:w-[15vw] lg:h-[15vw] items-center justify-center
+  @apply hover:scale-105 duration-300 rounded-full object-cover w-[10rem] h-[10rem] items-center justify-center
 }
 .bestBCh h1{
   @apply text-3xl font-bold text-slate-700 my-[2vh]
@@ -183,7 +182,7 @@ body{
   text-slate-700
 }
 .vehicleGrid{
-  width: 100%; height: 100%;
+  width: 100%; height: auto;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 1rem;
@@ -217,21 +216,17 @@ body{
 }
 .mobile{
   @apply flex lg:flex-row w-full h-auto items-center bg-slate-300 lg:justify-evenly
-  flex-col text-center lg:text-left
+  flex-col text-center lg:text-left w-4/5
 }
 .store img{
-  @apply w-[5vh] h-auto
+  @apply w-[5rem] h-auto
 }
 .store{
-  @apply bg-white p-3 px-6 rounded-md flex my-4 w-full sm:w-1/2 md:mx-4 items-center
+  @apply bg-white p-4 px-6 rounded-md flex my-4 w-full sm:w-1/2 md:mx-4 items-center
   hover:bg-orange-500 duration-300 justify-evenly sm:justify-between
 }
 .storeR{
   @apply pl-4
-}
-.about{
-  @apply h-auto w-full bg-white p-0 shadow-xl shadow-black justify-center items-center
-  flex py-16 flex-col
 }
 .aboutT{
   @apply text-center w-4/5
@@ -243,10 +238,10 @@ body{
   @apply flex w-full flex-col items-center text-center lg:m-10 py-5
 }
 .aboutE img{
-  @apply w-[10vh] bg-orange-500 p-1
+  @apply w-[6rem] bg-orange-500 p-1
 }
 .aImg{
-  @apply p-4 bg-orange-500 w-[12vh] h-auto rounded-full
+  @apply p-4 bg-orange-500 w-[7rem] h-auto rounded-full
 }
 footer{
   @apply w-full h-auto flex justify-evenly flex-col lg:flex-row py-[7vh] bg-white

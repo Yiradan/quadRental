@@ -1,7 +1,8 @@
 
 const Mobile = () => {
   return (
-    <div className='mobile p-[10vh]'>
+    <div className="w-full flex justify-center py-[6rem] bg-slate-300">
+      <div className='mobile max-w-[1920px]'>
       <div className="mobileL">
         <h3 className='text-2xl font-semibold'>Get our mobile app for easy and convenient usage</h3>
         <h1 className='text-5xl py-2 font-bold'>Download our application</h1>
@@ -26,6 +27,7 @@ const Mobile = () => {
       <div className="mobileR">
         <img src='/static/ad.png' alt='mobile ad' />
       </div>
+    </div>
     </div>
   )
 }

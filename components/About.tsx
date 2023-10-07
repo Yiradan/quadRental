@@ -2,10 +2,12 @@ import React from 'react'
 
 const About : React.FC = () => {
   return (
-    <div className='about'>
-      <div className='aboutT flex flex-col'>
+    <div className="w-full justify-center flex bg-white py-[4rem]">
+      <div className='max-w-[1920px] flex flex-col items-center'>
+      <div className='w-4/5 flex flex-col items-center justify-center py-10'>
         <h3 className='text-3xl font-semibold'>Plan your trip now</h3>
-        <div className="my-5 text-3xl lg:text-6xl lg:flex font-bold justify-center">
+        <div className="my-5 text-3xl lg:text-6xl flex flex-col lg:flex-row
+        font-bold justify-center">
           Quick & easy
           <div className="flex justify-center items-center">
             <h1 className='text-orange-500 px-3'>Quad</h1>
@@ -48,6 +50,7 @@ const About : React.FC = () => {
         </div>
       </div>
       
+    </div>
     </div>
   )
 }
