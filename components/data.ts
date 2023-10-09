@@ -30,7 +30,7 @@ export const vehicleList: vehicleListProps[] = [
   },
   {
     id: 4,
-    name: "Can-Am Outlander MAX Limited 1000R '23",
+    name: "Can-Am Outlander MAX 1000R '23",
     power: 91,
     fuel: 'gasoline',
     tank: 21,

@@ -12,7 +12,7 @@ body{
   @apply bg-slate-700 w-[100%] p-0 m-0 box-border
 }
 .header{
-  @apply h-[7vh] w-full flex items-center justify-between px-[5vw] shadow-black/50
+  @apply h-full w-full max-w-[1920px] flex items-center justify-between px-[5vw] shadow-black/50
 }
 .headerLeft{
   @apply flex h-full w-auto items-center justify-center
@@ -34,7 +34,7 @@ body{
   @apply hidden justify-evenly items-center md:flex
 }
 .headerRight a, .headerRightOrange a{
-  @apply text-[20px] font-normal duration-300 text-white hover:text-orange-500
+  @apply text-[20px] duration-300 hover:text-orange-500
 }
 .headerRightOrange a{
   @apply hover:text-slate-700 hover:translate-y-1
@@ -188,17 +188,20 @@ body{
   gap: 1rem;
   place-content: center;
 }
-.vehicleGrid > div{
+.vehicleGrid > a{
   @apply w-full h-full relative overflow-hidden duration-300 lg:m-0
   lg:ml-5 bg-slate-700
 }
-.fm img{
+.fm > a{
+  @apply w-full h-full bg-slate-700 relative overflow-hidden
+}
+.fm a > img{
   @apply bg-cover w-full h-full object-cover duration-[.4s] ease-in-out
 }
-.fm div:hover > .h1Div{
+.fm a:hover .h1Div{
   @apply top-0
 }
-.fm div:hover > img{
+.fm a:hover > img{
   @apply scale-105 opacity-20
 }
 .h1Div > div:hover > img{
@@ -215,7 +218,7 @@ body{
   @apply h-1/2 w-auto pr-5
 }
 .mobile{
-  @apply flex lg:flex-row w-full h-auto items-center bg-slate-300 lg:justify-evenly
+  @apply flex lg:flex-row h-auto items-center bg-slate-300 lg:justify-evenly
   flex-col text-center lg:text-left w-4/5
 }
 .store img{
@@ -244,8 +247,8 @@ body{
   @apply p-4 bg-orange-500 w-[7rem] h-auto rounded-full
 }
 footer{
-  @apply w-full h-auto flex justify-evenly flex-col lg:flex-row py-[7vh] bg-white
-  md:px-[5vw] sm:grid sm:grid-cols-2 xl:flex
+  @apply w-full h-auto lg:flex justify-between flex-col lg:flex-row py-16 bg-white
+  md:px-[5vw] sm:grid sm:grid-cols-2
 }
 .foot{
   @apply my-5 lg:py-0 px-10 w-full xl:m-0
@@ -264,4 +267,13 @@ footer{
 }
 .footB h1{
   @apply duration-300 hover:text-orange-500 text-lg cursor-pointer
+}
+.active{
+  @apply text-orange-500 font-black
+}
+.not-active{
+  @apply text-white
+}
+.activeS{
+  @apply text-slate-700 font-black
 }

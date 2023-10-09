@@ -1,4 +1,5 @@
 import CallUs from '@/components/CallUs'
+import ContactUs from '@/components/ContactUs'
 import CoverImage from '@/components/CoverImage'
 
 const Contact = () => {
@@ -7,10 +8,10 @@ const Contact = () => {
       <CoverImage
         title='Contact'
       />
-      <div className="w-full bg-white flex items-center flex-col py-[10vh]">
-        <div className="w-[90%] md:w-4/5 items-center flex lg:flex-row flex-col max-w-[1920px] justify-between">
-          <div className="flex flex-col w-full">
-            <h1 className='font-bold text-4xl'>Need additional information?</h1>
+      <div className="w-full bg-white flex items-center flex-col py-16">
+        <div className="w-[90%] md:w-4/5 items-center lg:items-start flex lg:flex-row flex-col max-w-[1920px] justify-between">
+          <div className="flex flex-col lg:w-2/5 w-full">
+            <h1 className='font-black text-5xl'>Need additional information?</h1>
             <p className='text-lg py-8 text-gray-500 text-justify font-normal'>A multifaceted professional skilled in multiple fields of research, development as well as a learning specialist. Over 15 years of experience.</p>
             <div className="flex flex-col">
               <div className="flex items-center">
@@ -29,9 +30,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center flex-col w-full ">
-            {'<3'}
-          </div>
+          <ContactUs />
         </div>
       </div>
       <CallUs />

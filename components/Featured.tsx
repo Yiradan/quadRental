@@ -12,10 +12,10 @@ const Featured: React.FC = () => {
         </Link>
       </div>
 
-        <div className='fm mt-10 w-full lg:flex lg:justify-center
+        <div className='fm mt-10 w-full flex flex-col lg:justify-center
         lg:items-center'>
-          <div className="w-full bg-slate-700 relative h-auto overflow-hidden">
-            <img src={vehicleList[0].image} alt='quad' />
+          <Link href='/quads'>
+            <img className='h-full' src={vehicleList[0].image} alt='quad' />
             <div className="h1Div sm:text-[2rem] text-[15px]">
               <div className="">
                 <img src='/static/quadW.png' alt='quad' />
@@ -38,10 +38,10 @@ const Featured: React.FC = () => {
                   <p>$ {vehicleList[0].price} / day</p>
                 </div>
             </div>
-          </div>
+          </Link>
           <div className="vehicleGrid lg:m-0 my-5 flex flex-col sm:grid">
 
-            <div className="col-start-1 col-end-3 row-start-1 row-end-3">
+            <Link href='/quads' className="col-start-1 col-end-3 row-start-1 row-end-3">
               <img src={vehicleList[1].image} alt="quad" />
               <div className="h1Div">
                 <div className="">
@@ -65,9 +65,9 @@ const Featured: React.FC = () => {
                   <p>$ {vehicleList[1].price} / day</p>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="col-start-3 col-end-5 row-start-1 row-end-3">
+            <Link href='/quads' className="col-start-3 col-end-5 row-start-1 row-end-3">
             <img src={vehicleList[2].image} alt="quad" />
               <div className="h1Div">
               <div className="">
@@ -91,9 +91,9 @@ const Featured: React.FC = () => {
                   <p>$ {vehicleList[2].price} / day</p>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="col-start-1 col-end-3 row-start-3 row-end-5">
+            <Link href='/quads' className="col-start-1 col-end-3 row-start-3 row-end-5">
             <img src={vehicleList[3].image} alt="quad" />
               <div className="h1Div">
               <div className="">
@@ -117,9 +117,9 @@ const Featured: React.FC = () => {
                   <p>$ {vehicleList[3].price} / day</p>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="col-start-3 col-end-5 row-start-3 row-end-5">
+            <Link href='/quads' className="col-start-3 col-end-5 row-start-3 row-end-5">
             <img src={vehicleList[4].image} alt="quad" />
               <div className="h1Div">
               <div className="">
@@ -143,7 +143,7 @@ const Featured: React.FC = () => {
                   <p>$ {vehicleList[4].price} / day</p>
                 </div>
               </div>
-            </div>
+            </Link>
 
           </div>
         </div>

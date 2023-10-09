@@ -1,12 +1,9 @@
 'use client';
 import { vehicleListProps } from "@/types";
-import { useRouter } from "next/navigation";
 import { FormEvent, useRef, useState } from "react";
 import { vehicleList } from "./data";
 
 const Rental = () => {
-
-  const route = useRouter()
 
   const [pDate, setPDate] = useState('')
   const [pTime, setPTime] = useState('')
@@ -22,10 +19,12 @@ const Rental = () => {
   const [address, setAddress] = useState('')
   const [city, setCity] = useState('')
   const [zip, setZip] = useState('')
-  const ref = useRef<null | HTMLFormElement>(null)
+  const ref = useRef<null | HTMLDivElement>(null)
 
   const [finalisation, setFinalization] = useState(false)
   const [error, setError] = useState(false)
+
+  const [sent, setSent] = useState(false)
 
   let vehUrl
   let vehName
@@ -50,9 +49,29 @@ const Rental = () => {
     }
   }
 
+  const submit = (e:FormEvent) => {
+    e.preventDefault()
+    ref.current?.scrollIntoView()
+    setPTime('')
+    setDDate('')
+    setVehicle('')
+    setLocation('')
+    setPDate('')
+    setFinalization(false)
+    setFName('')
+    setLName('')
+    setNumber('')
+    setAge('')
+    setEmail('')
+    setAddress('')
+    setCity('')
+    setZip('')
+    setSent(true)
+  }
+
   return (
     <div className='w-full flex justify-center'>
-      <form id="rent" ref={ref} className='rental max-w-[1920px]'>
+      <div id="rent" ref={ref} className='rental max-w-[1920px]'>
       <div className="rentalT">
         Book a quad
         <div className={`${error ? 'visible' : 'hidden'}
@@ -65,6 +84,19 @@ const Rental = () => {
           <h1
             onClick={()=> setError(prev => false)}
             className="pr-2 text-[35px] font-normal text-red-900 cursor-pointer"
+          >×</h1>
+        </div>
+
+        <div className={`${sent ? 'visible' : 'hidden'}
+          mt-3 flex items-center justify-between w-[90%] h-auto
+          bg-green-200 rounded-md p-1
+          `}>
+          <p className='pl-2 text-[17px] font-semibold text-green-900'>
+            Your order has been placed successfully!
+          </p>
+          <h1
+            onClick={()=> setSent(prev => false)}
+            className="pr-2 text-[35px] font-normal text-green-900 cursor-pointer"
           >×</h1>
         </div>
       </div>
@@ -153,7 +185,7 @@ const Rental = () => {
           <>
           <div onClick={()=> setFinalization(false)} className="backdrop"></div>
           
-          <div className="finalisation">
+          <form onSubmit={(submit)} className="finalisation">
             
             <div className="finalisationT">
               <h1>COMPLETE YOUR RESERVATION</h1>
@@ -201,7 +233,7 @@ const Rental = () => {
               </div>
 
               <div className="finalisationMR">
-                <h1 className='h-[20%]'>Vehicle - <h1 className="text-orange-500">{vehName}</h1></h1>
+                <h1 className='h-[20%]'>Vehicle - <p className="text-orange-500">{vehName}</p></h1>
                 <img className='h-full w-auto p-10' alt='car' src={vehUrl} />
               </div>
             </div>
@@ -237,6 +269,7 @@ const Rental = () => {
                   <label htmlFor="number"><h1>Phone number</h1>
                   <input
                     required
+                    type='number'
                     id='number'
                     value={number}
                     onChange={(e) => setNumber(e.target.value)}
@@ -308,10 +341,10 @@ const Rental = () => {
               Place reservation</button>
             </div>
             
-          </div>
+          </form>
           </>
         }
-    </form>
+    </div>
     </div>
   )
 }
