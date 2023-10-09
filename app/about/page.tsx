@@ -1,6 +1,7 @@
 import About from '@/components/About'
 import CallUs from '@/components/CallUs'
 import CoverImage from '@/components/CoverImage'
+import Image from 'next/image'
 
 const AboutPage = () => {
   return (
@@ -10,8 +11,8 @@ const AboutPage = () => {
       />
 
       <div className="ourCompany">
-          <div className="ocB">
-          <img src='/static/company.png' alt='company' className='md:w-1/2 w-full h-auto object-cover' />
+          <div className="ocB relative">
+          <Image width={500} height={500} src='/static/company.png' alt='company' className='md:w-1/2 w-full h-auto object-cover' />
           <div className="ocR py-16 md:p-0">
             <h2 className='text-[4vh] font-semibold text-gray-800'>About the company</h2>
             <h1 className='text-[6vh] py-5 font-bold'>You start the engine, and the adventure begins</h1>
@@ -23,7 +24,7 @@ const AboutPage = () => {
 
       <div className="ourTeam">
 
-        <div className="py-10 text-[5rem] md:text-[8rem] font-bold">
+        <div className="py-10 text-[4rem] md:text-[8rem] font-bold">
           Our team
         </div>
 
@@ -31,7 +32,9 @@ const AboutPage = () => {
         lg:grid-cols-3 w-4/5 sm:3/5 h-auto md:gap-10 py-10 md:place-content-between">
 
         <div className="card">
-          <img
+          <Image
+            width={300}
+            height={400}
             src='/static/ourTeam/1.jpg' alt='member' />
           <div className="cardB">
             <h1>Oskar Costantino</h1>
@@ -40,7 +43,9 @@ const AboutPage = () => {
         </div>
 
         <div className="card">
-          <img
+          <Image
+            width={300}
+            height={400}
             src='/static/ourTeam/2.jpg' alt='member' />
           <div className="cardB">
             <h1>Johnson Elishua</h1>
@@ -49,7 +54,9 @@ const AboutPage = () => {
         </div>
 
         <div className="card">
-          <img
+          <Image
+            width={300}
+            height={400}
             src='/static/ourTeam/3.jpg' alt='member' />
           <div className="cardB">
             <h1>Nicole Lillie</h1>
@@ -58,7 +65,9 @@ const AboutPage = () => {
         </div>
 
         <div className="card">
-          <img
+          <Image
+            width={300}
+            height={400}
             src='/static/ourTeam/4.jpg' alt='member' />
           <div className="cardB">
             <h1>Sydne Dallas</h1>
@@ -67,7 +76,9 @@ const AboutPage = () => {
         </div>
 
         <div className="card">
-          <img
+          <Image
+            width={300}
+            height={400}
             src='/static/ourTeam/5.jpg' alt='member' />
           <div className="cardB">
             <h1>Reagan Johnie</h1>
@@ -76,7 +87,9 @@ const AboutPage = () => {
         </div>
 
         <div className="card">
-          <img
+          <Image
+            width={300}
+            height={400}
             src='/static/ourTeam/6.jpg' alt='member' />
           <div className="cardB">
             <h1>Ciara Keeley</h1>

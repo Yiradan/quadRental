@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Subscription from "./Subscription"
 
 const Footer = () => {
@@ -12,11 +13,11 @@ const Footer = () => {
         <div className="footB">
           <p className='text-gray-700 font-semibold py-3'>We offer a big range of vehicles for all your driving needs.</p>
           <div className="flex items-center">
-            <img src='/static/phone.png' alt='phone' />
+            <Image width={30} height={30} src='/static/phone.png' alt='phone' />
             <h1 className="pl-2 font-bold">(123) - 456 - 789</h1>
           </div>
           <div className="flex items-center">
-            <img src='/static/email.png' alt='email' />
+            <Image width={30} height={30} src='/static/email.png' alt='email' />
             <h1 className='pl-2 font-bold'>info@quad-rental.com</h1>
           </div>
         </div>

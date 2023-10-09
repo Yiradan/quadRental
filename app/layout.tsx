@@ -2,8 +2,6 @@ import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import type { Metadata } from 'next'
 import './about.css'
-import './about/aboutUs.css'
-import './quads/quads.css'
 
 
 export const metadata: Metadata = {

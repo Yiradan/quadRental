@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image"
 
 import { FormEvent, useState } from "react"
 
@@ -58,7 +59,7 @@ const ContactUs = () => {
       <button type='submit' className='text-xl bg-orange-500 rounded-md w-full
       p-3 text-white flex items-center justify-center font-bold duration-300
       hover:bg-slate-700'>
-        <img src='/static/envelope.png' alt='envelope' className='h-6 w-auto pr-3' />
+        <Image width={20} height={20} src='/static/envelope.png' alt='envelope' className='h-6 w-auto pr-3' />
         Send message
       </button>
     </form>

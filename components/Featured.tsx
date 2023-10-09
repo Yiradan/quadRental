@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { vehicleList } from "./data"
 
@@ -12,29 +13,29 @@ const Featured: React.FC = () => {
         </Link>
       </div>
 
-        <div className='fm mt-10 w-full flex flex-col lg:justify-center
+        <div className='fm mt-10 w-full flex flex-col lg:flex-row lg:justify-center
         lg:items-center'>
           <Link href='/quads'>
-            <img className='h-full' src={vehicleList[0].image} alt='quad' />
+            <Image width={600} height={600} src={vehicleList[0].image} alt='quad' />
             <div className="h1Div sm:text-[2rem] text-[15px]">
               <div className="">
-                <img src='/static/quadW.png' alt='quad' />
+                <Image width={50} height={50} src='/static/quadW.png' alt='quad' />
                 <p>{vehicleList[0].name}</p>
               </div>
               <div className="">
-                <img src='/static/engine.png' alt='engine' />
+                <Image width={50} height={50} src='/static/engine.png' alt='engine' />
                 <p>{vehicleList[0].power} hp</p>
               </div>
               <div className="">
-                <img src='/static/fuel.png' alt='fuel' />
+                <Image width={50} height={50} src='/static/fuel.png' alt='fuel' />
                 <p>{vehicleList[0].fuel}</p>
               </div>
               <div className="">
-                <img src='/static/tank.png' alt='gasoline' />
+                <Image width={50} height={50} src='/static/tank.png' alt='gasoline' />
                 <p>{vehicleList[0].tank} l</p>
               </div>
               <div className="">
-                  <img src='/static/price.png' alt='price' />
+                  <Image width={50} height={50} src='/static/price.png' alt='price' />
                   <p>$ {vehicleList[0].price} / day</p>
                 </div>
             </div>
@@ -42,104 +43,104 @@ const Featured: React.FC = () => {
           <div className="vehicleGrid lg:m-0 my-5 flex flex-col sm:grid">
 
             <Link href='/quads' className="col-start-1 col-end-3 row-start-1 row-end-3">
-              <img src={vehicleList[1].image} alt="quad" />
+              <Image width={600} height={600} src={vehicleList[1].image} alt="quad" />
               <div className="h1Div">
                 <div className="">
-                  <img src='/static/quadW.png' alt='quad' />
+                  <Image width={50} height={50}  src='/static/quadW.png' alt='quad' />
                   <p>{vehicleList[1].name}</p>
                 </div>
                 <div className="">
-                  <img src='/static/engine.png' alt='engine' />
+                  <Image width={50} height={50}  src='/static/engine.png' alt='engine' />
                   <p>{vehicleList[1].power} hp</p>
                 </div>
                 <div className="">
-                  <img src='/static/fuel.png' alt='fuel' />
+                  <Image width={50} height={50}  src='/static/fuel.png' alt='fuel' />
                   <p>{vehicleList[1].fuel}</p>
                 </div>
                 <div className="">
-                  <img src='/static/tank.png' alt='gasoline' />
+                  <Image width={50} height={50}  src='/static/tank.png' alt='gasoline' />
                   <p>{vehicleList[1].tank} l</p>
                 </div>
                 <div className="">
-                  <img src='/static/price.png' alt='price' />
+                  <Image width={50} height={50}  src='/static/price.png' alt='price' />
                   <p>$ {vehicleList[1].price} / day</p>
                 </div>
               </div>
             </Link>
 
             <Link href='/quads' className="col-start-3 col-end-5 row-start-1 row-end-3">
-            <img src={vehicleList[2].image} alt="quad" />
+            <Image width={600} height={600} src={vehicleList[2].image} alt="quad" />
               <div className="h1Div">
               <div className="">
-                  <img src='/static/quadW.png' alt='quad' />
+                  <Image width={50} height={50}  src='/static/quadW.png' alt='quad' />
                   <p>{vehicleList[2].name}</p>
                 </div>
                 <div className="">
-                  <img src='/static/engine.png' alt='engine' />
+                  <Image width={50} height={50}  src='/static/engine.png' alt='engine' />
                   <p>{vehicleList[2].power} hp</p>
                 </div>
                 <div className="">
-                  <img src='/static/fuel.png' alt='fuel' />
+                  <Image width={50} height={50}  src='/static/fuel.png' alt='fuel' />
                   <p>{vehicleList[2].fuel}</p>
                 </div>
                 <div className="">
-                  <img src='/static/tank.png' alt='gasoline' />
+                  <Image width={50} height={50}  src='/static/tank.png' alt='gasoline' />
                   <p>{vehicleList[2].tank} l</p>
                 </div>
                 <div className="">
-                  <img src='/static/price.png' alt='price' />
+                  <Image width={50} height={50}  src='/static/price.png' alt='price' />
                   <p>$ {vehicleList[2].price} / day</p>
                 </div>
               </div>
             </Link>
 
             <Link href='/quads' className="col-start-1 col-end-3 row-start-3 row-end-5">
-            <img src={vehicleList[3].image} alt="quad" />
+            <Image width={600} height={600} src={vehicleList[3].image} alt="quad" />
               <div className="h1Div">
               <div className="">
-                  <img src='/static/quadW.png' alt='quad' />
+                  <Image width={50} height={50}  src='/static/quadW.png' alt='quad' />
                   <p>{vehicleList[3].name}</p>
                 </div>
                 <div className="">
-                  <img src='/static/engine.png' alt='engine' />
+                  <Image width={50} height={50}  src='/static/engine.png' alt='engine' />
                   <p>{vehicleList[3].power} hp</p>
                 </div>
                 <div className="">
-                  <img src='/static/fuel.png' alt='fuel' />
+                  <Image width={50} height={50}  src='/static/fuel.png' alt='fuel' />
                   <p>{vehicleList[3].fuel}</p>
                 </div>
                 <div className="">
-                  <img src='/static/tank.png' alt='gasoline' />
+                  <Image width={50} height={50}  src='/static/tank.png' alt='gasoline' />
                   <p>{vehicleList[3].tank} l</p>
                 </div>
                 <div className="">
-                  <img src='/static/price.png' alt='price' />
+                  <Image width={50} height={50}  src='/static/price.png' alt='price' />
                   <p>$ {vehicleList[3].price} / day</p>
                 </div>
               </div>
             </Link>
 
             <Link href='/quads' className="col-start-3 col-end-5 row-start-3 row-end-5">
-            <img src={vehicleList[4].image} alt="quad" />
+            <Image width={600} height={600} src={vehicleList[4].image} alt="quad" />
               <div className="h1Div">
               <div className="">
-                  <img src='/static/quadW.png' alt='quad' />
+                  <Image width={50} height={50}  src='/static/quadW.png' alt='quad' />
                   <p>{vehicleList[4].name}</p>
                 </div>
                 <div className="">
-                  <img src='/static/engine.png' alt='engine' />
+                  <Image width={50} height={50} src='/static/engine.png' alt='engine' />
                   <p>{vehicleList[4].power} hp</p>
                 </div>
                 <div className="">
-                  <img src='/static/fuel.png' alt='fuel' />
+                  <Image width={50} height={50}  src='/static/fuel.png' alt='fuel' />
                   <p>{vehicleList[4].fuel}</p>
                 </div>
                 <div className="">
-                  <img src='/static/tank.png' alt='gasoline' />
+                  <Image width={50} height={50}  src='/static/tank.png' alt='gasoline' />
                   <p>{vehicleList[4].tank} l</p>
                 </div>
                 <div className="">
-                  <img src='/static/price.png' alt='price' />
+                  <Image width={50} height={50}  src='/static/price.png' alt='price' />
                   <p>$ {vehicleList[4].price} / day</p>
                 </div>
               </div>

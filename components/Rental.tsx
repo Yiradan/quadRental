@@ -1,6 +1,7 @@
 'use client';
 import { vehicleListProps } from "@/types";
-import { FormEvent, useRef, useState } from "react";
+import Image from "next/image";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { vehicleList } from "./data";
 
 const Rental = () => {
@@ -26,16 +27,15 @@ const Rental = () => {
 
   const [sent, setSent] = useState(false)
 
-  let vehUrl
-  let vehName
+  const [vehUrl, setVehUrl] = useState('')
+  const [vehName, setVehName] = useState('')
 
-  for(let i = 0; i<vehicleList.length; i++){
-    if(vehicleList[i].id == parseInt(vehicle)){
-      vehUrl = vehicleList[i].image
-      vehName = vehicleList[i].name
-    }
-      
-  }
+  useEffect(()=> {
+    setVehUrl(vehicleList[parseInt(vehicle)-1]?.image)
+    setVehName(vehicleList[parseInt(vehicle)-1]?.name)
+  }, [vehicle])
+
+  
   
   const check = (e:FormEvent) => {
     e.preventDefault()
@@ -104,7 +104,7 @@ const Rental = () => {
 
         <label htmlFor="pickup">
           <h1>
-            <img src='/static/calendar.png' alt='map' />
+            <Image width={30} height={30} src='/static/calendar.png' alt='map' />
             Pick-up date</h1>
           <input
             required
@@ -118,7 +118,7 @@ const Rental = () => {
 
         <label htmlFor="pickupTime">
           <h1>
-            <img src='/static/clock.png' alt='clock' />
+            <Image width={30} height={30} src='/static/clock.png' alt='clock' />
             Pick-up time
           </h1>
           <input
@@ -131,7 +131,7 @@ const Rental = () => {
 
         <label htmlFor="dropoff">
           <h1>
-            <img src='/static/calendar.png' alt='map' />
+            <Image width={30} height={30} src='/static/calendar.png' alt='map' />
             Drop-off date
           </h1>
           <input
@@ -145,7 +145,7 @@ const Rental = () => {
         
         <label htmlFor="vehicle">
           <h1>
-            <img src='/static/quad.png' alt='atv' />
+            <Image width={30} height={30} src='/static/quad.png' alt='atv' />
             Vehicle
           </h1>
         <select
@@ -161,7 +161,7 @@ const Rental = () => {
         
         <label htmlFor="location">
           <h1>
-            <img src='/static/map.png' alt="map" />
+            <Image width={30} height={30} src='/static/map.png' alt="map" />
             Location
           </h1>
         <select
@@ -201,7 +201,7 @@ const Rental = () => {
 
                 <label className='flex flex-col'>
                   <div className='flex flex-row items-center'>
-                    <img src='/static/calendar.png' />
+                    <Image width={30} height={30} src='/static/calendar.png' alt='calendar' />
                     <h2>Pick-up Date & Time</h2>
                   </div>
                   <p>{pDate} / {pTime}</p>
@@ -209,7 +209,7 @@ const Rental = () => {
 
                 <label className='flex flex-col'>
                   <div className='flex items-center'>
-                    <img src='/static/calendar.png' />
+                    <Image width={30} height={30} src='/static/calendar.png' alt='calendar' />
                     <h2>Drop-off Date</h2>
                   </div>
                   <p>{dDate} / before 10 PM</p>
@@ -217,7 +217,7 @@ const Rental = () => {
 
                 <label className='flex flex-col'>
                   <div className='flex items-center'>
-                    <img src='/static/map.png' />
+                    <Image width={30} height={30} src='/static/map.png' alt='map' />
                     <h2>Pick-up location</h2>
                   </div>
                   <p>{location}</p>
@@ -225,7 +225,7 @@ const Rental = () => {
 
                 <label className='flex flex-col'>
                   <div className='flex items-center'>
-                    <img src='/static/map.png' />
+                    <Image width={30} height={30} src='/static/map.png' alt='map' />
                     <h2>Drop-off location</h2>
                   </div>
                   <p>{location}</p>
@@ -234,7 +234,7 @@ const Rental = () => {
 
               <div className="finalisationMR">
                 <h1 className='h-[20%]'>Vehicle - <p className="text-orange-500">{vehName}</p></h1>
-                <img className='h-full w-auto p-10' alt='car' src={vehUrl} />
+                <Image width={600} height={600} className='h-full w-auto p-10' alt='car' src={vehUrl} />
               </div>
             </div>
             <div className="finalisationB flex-col flex my-[3vh]">

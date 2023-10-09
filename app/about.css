@@ -68,13 +68,13 @@ body{
   @apply w-[80vw] h-[70vh] lg:w-[60vw] flex flex-col justify-center items-center
 }
 .title h1{
-  @apply text-[20vw] font-black lg:text-[8vw]
+  @apply text-[4rem] md:text-[6rem] font-black
 }
 .title h2{
-  @apply  text-center text-white text-[7vw] font-light lg:text-[3vw]
+  @apply  text-center text-[2rem] text-white md:text-[3rem] font-light
 }
 .title h1:nth-child(2){
-  @apply text-white text-[12vw] lg:text-[6vw]
+  @apply text-white text-[3rem] md:text-[5rem]
 }
 .rentForm{
   @apply w-full flex-col  h-auto bg-gray-200 flex justify-center items-center
@@ -241,7 +241,7 @@ body{
   @apply flex w-full flex-col items-center text-center lg:m-10 py-5
 }
 .aboutE img{
-  @apply w-[6rem] bg-orange-500 p-1
+  @apply w-[6rem] h-auto bg-orange-500 p-1
 }
 .aImg{
   @apply p-4 bg-orange-500 w-[7rem] h-auto rounded-full
@@ -276,4 +276,41 @@ footer{
 }
 .activeS{
   @apply text-slate-700 font-black
+}
+.vehicleCard{
+  @apply flex flex-col bg-gray-200 items-center shadow-xl shadow-black/50
+  my-16 md:my-0
+}
+.cardDetails{
+  @apply flex flex-row w-4/5 items-center my-[5px] justify-between text-justify
+}
+.about{
+  @apply flex flex-col
+}
+.ourTeam{
+  @apply w-full h-auto flex flex-col justify-center items-center py-10 bg-slate-200
+}
+.card{
+  @apply relative flex flex-col w-full h-auto shadow-xl shadow-slate-300 mt-10
+}
+.card img{
+  @apply h-3/4 w-auto object-cover
+}
+.cardB{
+  @apply h-1/4 py-5 w-full text-3xl flex flex-col justify-center items-center bg-white
+}
+.cardB h1{
+  @apply text-2xl font-bold
+}
+.cardB h2{
+  @apply text-lg pt-2 font-semibold text-gray-700
+}
+.ourCompany{
+  @apply py-[15vh] flex bg-white shadow-xl shadow-black justify-center
+}
+.ocB{
+  @apply w-[90%] md:w-4/5 h-auto flex flex-col md:flex-row justify-between
+}
+.ocR{
+  @apply w-full md:ml-10
 }

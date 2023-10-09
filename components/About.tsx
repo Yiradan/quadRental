@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const About : React.FC = () => {
@@ -19,7 +20,7 @@ const About : React.FC = () => {
       <div className="aboutM">
         <div className="aboutE">
           <div className="aImg">
-            <img src='/static/choice.png' alt='choice img' />
+            <Image width={60} height={60} src='/static/choice.png' alt='choice img' />
           </div>
           <h1 className='py-5 text-3xl font-bold'>Select vehicle</h1>
           <h3 className='text-slate-600 font-semibold text-xl'>
@@ -29,7 +30,7 @@ const About : React.FC = () => {
 
         <div className="aboutE">
           <div className="aImg">
-            <img src='/static/operator.png' alt='operator' />
+            <Image width={60} height={60} src='/static/operator.png' alt='operator' />
           </div>
           <h1 className='py-5 text-3xl font-bold'>Contact operator</h1>
           <h3 className='text-slate-600 font-semibold text-xl'>
@@ -39,7 +40,7 @@ const About : React.FC = () => {
 
         <div className="aboutE">
           <div className="aImg">
-            <img src='/static/quadW.png' alt='quad' />
+            <Image width={60} height={60} src='/static/quadW.png' alt='quad' />
           </div>
           <h1 className='py-5 text-3xl font-bold'>
             Let's drive

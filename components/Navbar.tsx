@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -29,7 +30,7 @@ const Navbar = () => {
       <div className="absolute z-10 top-0 left-0 h-[7vh] max-h-12 w-full flex justify-center items-center">
         <div id='nav' className='header'>
           <Link href='/' className="headerLeft">
-            <img src='/static/quadW.png' alt='logo' />
+            <Image width={30} height={30} src='/static/quadW.png' alt='logo' />
             <div className="headerLeftR">
               <h1 className='text-orange-500 pr-2'>Quad</h1>
               <h2>rental</h2>
@@ -53,7 +54,7 @@ const Navbar = () => {
               Contact
             </Link>
           </div>
-          <img
+          <Image width={30} height={30}
             onClick={()=> setMenu(prev => true)}
             src='/static/menuW.png' alt='menu'
             className='h-[40%] w-auto md:hidden cursor-pointer'
@@ -102,7 +103,7 @@ const Navbar = () => {
         `}>
       <div className='header'>
         <Link href='/' className="headerLeft">
-          <img src='/static/quadW.png' alt='logo' />
+          <Image width={30} height={30} src='/static/quadW.png' alt='logo' />
           <div className="headerLeftR">
             <h1 className='pr-2 text-slate-700'>Quad</h1>
             <h2>rental</h2>
@@ -126,7 +127,7 @@ const Navbar = () => {
             Contact
           </Link>
         </div>
-        <img
+        <Image width={30} height={30}
           onClick={()=> setMenu(prev => true)}
           src='/static/menuW.png' alt='menu'
           className='h-[40%] w-auto md:hidden cursor-pointer'
@@ -135,7 +136,7 @@ const Navbar = () => {
       </div>
 
       <div onClick={()=> window.scrollTo(0,0)} className={`z-10 up ${scrollPosition > 300 ? 'visible' : 'hidden'} `}>
-        <img src='/static/up.png' alt='up' />
+        <Image width={30} height={30} src='/static/up.png' alt='up' />
       </div>
     </>
   )

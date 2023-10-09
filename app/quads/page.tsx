@@ -24,45 +24,55 @@ const Quads = () => {
                     </div>
                     <div className="flex items-center w-full flex-col text-gray-500 font-semibold">
                       <div className="cardDetails">
-                        <img
+                        <Image
+                          width={30}
+                          height={30}
                           src='/static/quadG.png'
-                          className='pr-5 h-[1.5em]'
+                          className='pr-5 h-[1.5em] w-auto'
                           alt='quad'
                         />
                         <p className='text-[1rem]'>{vehicle.name}</p>
                       </div>
 
                       <div className="cardDetails">
-                        <img
+                        <Image
+                          width={30}
+                          height={30}
                           src='/static/engineG.png'
-                          className='pr-3 h-[1.5em]'
+                          className='pr-3 h-[1.5em] w-auto'
                           alt='engine'
                         />
                         <p className='text-[1rem]'>{vehicle.power} hp</p>
                       </div>
 
                       <div className="cardDetails">
-                        <img
+                        <Image
+                          width={30}
+                          height={30}
                           src='/static/fuelG.png'
-                          className='pr-3 h-[1.5em]'
+                          className='pr-3 h-[1.5em] w-auto'
                           alt='fuel'
                         />
                         <p className='text-[1rem]'>{vehicle.fuel}</p>
                       </div>
 
                       <div className="cardDetails">
-                        <img
+                        <Image
+                          width={30}
+                          height={30}
                           src='/static/tankG.png'
-                          className='pr-3 h-[1.5em]'
+                          className='pr-3 h-[1.5em] w-auto'
                           alt='tank'
                         />
                         <p className='text-[1rem]'>{vehicle.tank} l</p>
                       </div>
 
                       <div className="cardDetails">
-                        <img
+                        <Image
+                          width={30}
+                          height={30}
                           src='/static/priceG.png'
-                          className='pr-3 h-[1.5em]'
+                          className='pr-3 h-[1.5em] w-auto'
                           alt='price'
                         />
                         <p className='text-[1rem]'>${vehicle.price} / day</p>
