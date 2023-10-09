@@ -43,7 +43,7 @@ const About : React.FC = () => {
             <Image width={60} height={60} src='/static/quadW.png' alt='quad' />
           </div>
           <h1 className='py-5 text-3xl font-bold'>
-            Let's drive
+            Let&apos;s drive
           </h1>
           <h3 className='text-slate-600 font-semibold text-xl'>
             Enjoy the speed and the wind while gliding through the enviorment
